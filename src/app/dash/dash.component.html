@@ -1,0 +1,9 @@
+
+<section>
+  <app-card *ngFor="let card of cardsItems" [card]="card"
+                
+  [ngClass]="{'Sessions': card.title == 'Sessions' ,'Formateurs': card.title == 'Formateurs' , 'Participants': card.title == 'Participants'}">
+    </app-card>
+    <app-table-sessions ></app-table-sessions>
+    <app-table-formateurs ></app-table-formateurs>
+</section>

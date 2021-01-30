@@ -1,0 +1,24 @@
+
+table, td, th {
+    border: 1px solid white;
+  }
+  
+  table {
+    width: 300%;
+    height: 300px;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-left: 50%;
+  }
+  .head{
+      background-color: #3f51b5;
+  }
+  .blue{
+      background-color: rgb(167, 190, 233);
+  }
+  .bluee{
+    background-color: rgb(217, 223, 233);
+}
+td{
+    text-align: center;
+}

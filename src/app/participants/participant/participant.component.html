@@ -1,0 +1,21 @@
+<h3>
+    {{participant.prenom}} {{participant.nom}}
+</h3>
+
+<p> Email :  {{participant.email}}
+    <br>
+    Adresse : {{participant.adresse}}
+    <br>
+    Societe : {{participant.societe}}
+    <br>
+    Poste : {{participant.poste}}
+    <a class="delete" (click)="onDelete()">
+        <img  width="40" alt=" delete" src="assets/delete.png" />
+      </a>
+    <a [routerLink]="['./edit',participant.id]" routerLinkActive="active" class="edit">
+        <img  width="40" alt="edit" src="assets/editf.png" />
+      </a>
+ </p>
+ 
+
+ 

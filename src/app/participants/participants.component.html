@@ -1,0 +1,17 @@
+<header>
+    <a class="cur" routerLink="./add" routerLinkActive="active">
+        <img width="40px" src="assets/plus.png">
+    </a> 
+    <a class="cur" routerLink="./refresh" routerLinkActive="active">
+        <img class="cur" width="40px" src="assets/refresh.png"></a>
+ </header>
+ <section>
+ <h2>Liste des Participants</h2>
+ <app-participant *ngFor="let participant of participantsItems" [participant]="participant"
+
+     [ngStyle]="{ margin: '0px', padding: '50px'}">
+ </app-participant>
+   </section>
+     <router-outlet></router-outlet>
+ 
+ 

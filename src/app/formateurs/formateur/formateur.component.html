@@ -1,0 +1,18 @@
+<h3>{{formateur.prenom}} {{formateur.nom}}</h3>
+
+<p> {{formateur.email}}
+    <br>
+    Adresse: {{formateur.adresse}}
+    <br>
+    
+    Domaine : {{formateur.domaine}}
+    <a class="delete" (click)="onDelete()">
+        <img  width="40" alt=" delete" src="assets/delete.png" />
+      </a>
+    <a [routerLink]="['./edit',formateur.id]" routerLinkActive="active" class="edit">
+        <img  width="40" alt="edit" src="assets/editf.png" />
+      </a>
+ </p>
+ 
+
+ 

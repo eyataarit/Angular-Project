@@ -1,0 +1,16 @@
+<header>
+   <a class="cur" routerLink="./add" routerLinkActive="active">
+       <img width="40px" src="assets/plus.png">
+   </a> 
+   <a routerLink="./refresh" routerLinkActive="active">
+     <img class="cur" width="40px" src="assets/refresh.png"></a>
+</header>
+<section>
+<h2>Liste des Formateurs</h2>
+<app-formateur *ngFor="let formateur of formateursItems" [formateur]="formateur"
+    [ngClass]="{'mobile': formateur.domaine == 'mobile' ,'web': formateur.domaine == 'web'}"
+    [ngStyle]="{ margin: '0px', padding: '50px'}">
+</app-formateur>
+  </section>
+    <router-outlet></router-outlet>
+

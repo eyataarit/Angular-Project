@@ -1,0 +1,29 @@
+
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 1px;
+  }
+section {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+  }
+section > app-formateur 
+{
+    width: 1000px;
+    height: 60px;
+   
+}
+h2{
+  text-align: center;
+  background-color: cornflowerblue;
+  width: 1105px;
+  margin-top: 10px;
+
+}
+.cur{
+  cursor: pointer;
+}

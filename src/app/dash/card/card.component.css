@@ -1,0 +1,42 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    border: 2px solid;
+    background-color: #29394b;
+    padding: 10px;
+    color: #bdc2c5;
+  }
+  :host.Sessions {
+      background-color: chocolate;
+  }
+  :host.Sessions > h2 {
+    color: #e8edf0;
+  }
+  
+  :host.Participants {
+    background-color: rgb(107, 4, 110);
+}
+:host.Participants > h2 {
+  color: #f7f7f7;
+}
+  :host.Formateurs {
+      background-color:rgb(49, 161, 49);
+  }
+  :host.Formateurs > h2 {
+    color: #e5eeeb;
+  }
+
+ img{
+    width: 160px;
+    height: 160px;
+  position: left;
+  border-radius:100px;
+ }
+
+ .position{  
+     margin-right: 10px;
+     margin-left: 200px;
+     margin-bottom: 50px;
+ }

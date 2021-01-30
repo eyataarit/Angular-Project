@@ -1,0 +1,34 @@
+<header>
+    <h2 text-align="center" >Modifier un formateur </h2>
+</header>
+    <form #formateurForm="ngForm" (ngSubmit)="editformateur(formateurForm.value)">
+        <table>
+    <div>
+     <tr>
+         <td><label for="nom">Nom</label></td>
+         <td><input type="text" name="nom" id="nom" [(ngModel)]="formateur.nom" required></td>
+     </tr>
+    <tr>
+       <td><label for="prenom">Prenom</label></td> 
+       <td><input type="text" name="prenom" id="prenom" [(ngModel)]="formateur.prenom" required></td> 
+    </tr>
+   <tr>
+   <td><label for="adresse">Adresse</label></td> 
+    <td><input type="text" name="adress" id="adress" [(ngModel)]="formateur.adresse" required></td>
+   </tr>
+<tr>
+    <td><label for="email">Email</label></td>
+    <td><input type="email" name="email" id="email" [(ngModel)]="formateur.email" required></td>
+</tr>
+    <tr>
+       <td><label for="domaine">Domaine d'expertise</label></td> 
+        <td><select name="domaine" id="domaine"  [(ngModel)]="formateur.domaine" required>
+             <option *ngFor="let domaine of domaines" [value]="domaine">{{domaine}}</option>
+        </select></td>
+     </tr>
+    
+    </div>
+    </table>
+        <button type="submit"
+        [disabled]="!formateurForm.form.valid">Modifier</button>
+        </form>

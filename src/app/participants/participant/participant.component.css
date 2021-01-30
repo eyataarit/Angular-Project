@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    background-color: #90b2d8;
+    padding: 150px;
+    color: #bdc2c5;
+text-align: top;  }
+h3, p  {
+  margin-top: -30px;
+  margin-right: -10px;
+  color: rgb(27, 86, 212);
+  margin-bottom: 20px;
+}  
+p{
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.delete {
+    padding: 4px;
+    font-size: .8em;
+    border-radius: 7px;
+    color: #0a0909;
+    cursor: pointer;
+    margin-left:900px ;
+    
+  }
+  .edit {
+    cursor: pointer;
+  }
+  

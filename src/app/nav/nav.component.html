@@ -1,0 +1,50 @@
+<mat-sidenav-container margin-top="50px" class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="white">
+      <img  width="80" alt="espace admin" src="assets/adminn.PNG"  />
+      Espace Admin
+    </mat-toolbar>
+    <br><br>
+    <mat-nav-list >
+      <img src="../../assets/loupe.png" height="30px" width="30px " style="margin-right: 15px;">
+       <input  type="search" placeholder="Chercher Session" (click)="search()" > 
+<br><br>
+      <a mat-list-item routerLink="./dashboard"> 
+        <img src="assets/dashboard.PNG" class="icon"/><h1>Dashboard</h1></a>
+        <br>
+      <a mat-list-item routerLink="/sessions/list">
+        <img src="assets/formations.PNG" class="icon"/><h1>Sessions</h1></a>
+        <br>
+      <a mat-list-item routerLink="/formateurs">
+        <img src="assets/formateurs.png" class="icon"/><h1>Formateurs</h1> </a>
+        <br>
+      <a mat-list-item routerLink="/participants">
+        <img src="assets/participants.PNG" class="icon"/><h1>Participants</h1> </a>
+   
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      
+      <div class="spacer"></div>
+      <span margin-left="10px">
+        {{date | date:'yyyy-MM-dd'}}  
+        
+        Samedi Le 30-01-2021
+      </span>
+        <img width="40"  alt="logout" src="assets/icon.png" />
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
